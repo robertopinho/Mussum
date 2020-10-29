@@ -4,12 +4,12 @@
   "port": 5433,
   "username": "postgres",
   "password": "docker",
-  "database": "mussum",
+  "database": "postgres",
   "entities": [
     "src/models/**/*.ts"
  ],
  "migrations": [
-  "src/database/migrations/**/*.ts"
+  "src/database/migrations/*.ts"
 ],
  "cli":{
   "migrationsDir": [

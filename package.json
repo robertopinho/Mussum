@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "app.ts",
   "license": "MIT",
+  "type": "module",
   "scripts": {
     "build": "tsc",
     "dev": "ts-node-dev --inspect --transpileOnly --ignore-watch node_modules src/server.ts",

@@ -1,21 +1,19 @@
 import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn } from 'typeorm';
-@Entity("Discipline")
-export default class Discipline {
+
+@Entity()
+export default class Student {
     @PrimaryGeneratedColumn('uuid')
     id: string;
 
-    @Column({
-        length: 100,
-        unique: true,
-    })
+    @Column()
     name: string;
 
     @Column()
-    duration: number;
+    key: number;
 
-    @CreateDateColumn({name: 'created_At'})
+    @CreateDateColumn({ name: 'created_At' })
     createdAt: Date;
 
-    @UpdateDateColumn({name: 'updated_At'})
+    @UpdateDateColumn({ name: 'updated_At' })
     updatedAt: Date;
-}
+} 
