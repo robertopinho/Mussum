@@ -5,16 +5,19 @@
   "username": "postgres",
   "password": "docker",
   "database": "postgres",
+  "cache": {
+    "duration": 20000
+  },
   "entities": [
     "src/models/**/*.ts"
- ],
- "migrations": [
-  "src/database/migrations/*.ts"
-],
- "cli":{
-  "migrationsDir": [
-    "src/database/migrations/"
   ],
-  "entitiesDir": "src/models"
+  "migrations": [
+    "src/database/migrations/*.ts"
+  ],
+  "cli": {
+    "migrationsDir": [
+      "src/database/migrations/"
+    ],
+    "entitiesDir": "src/models"
   }
 }

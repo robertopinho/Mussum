@@ -1,5 +1,5 @@
 import { Column, CreateDateColumn, Entity, ManyToOne, OneToMany, OneToOne, PrimaryGeneratedColumn, UpdateDateColumn } from 'typeorm';
-import Class from './Class';
+import Discipline from './Discipline';
 import Content from './Content';
 
 @Entity()
@@ -13,8 +13,8 @@ export default class Lesson {
     @OneToOne(type => Content, lesson => Lesson)
     content: Content;
 
-    @ManyToOne(type => Class, lesson => Lesson)
-    classe: Class
+    @ManyToOne(type => Discipline, lesson => Lesson, {eager: true})
+    Disciplines: Discipline
 
     @CreateDateColumn({ name: 'created_At' })
     createdAt: Date;

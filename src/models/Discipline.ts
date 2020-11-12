@@ -2,7 +2,7 @@ import { Column, CreateDateColumn, Entity, OneToMany, PrimaryGeneratedColumn, Up
 import Lesson from "./Lesson";
 
 @Entity()
-export default class Class {
+export default class Discipline {
     @PrimaryGeneratedColumn('uuid')
     id: string;
 
@@ -12,7 +12,7 @@ export default class Class {
     })
     name: string;
 
-    @OneToMany(type => Lesson, classe => Class)
+    @OneToMany(type => Lesson, disciplines => Discipline)
     lesson: Lesson[];
     
     @Column()
