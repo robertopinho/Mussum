@@ -1,6 +1,6 @@
 import { Column, CreateDateColumn, Entity, JoinTable, ManyToMany, PrimaryGeneratedColumn, UpdateDateColumn } from 'typeorm';
 import Discipline from './Discipline'
-import { IsEmail, Max, MaxLength, Min, min, MinLength } from 'class-validator';
+import { IsEmail, Max, MaxLength, Min, MinLength } from 'class-validator';
 @Entity()
 export default class Student {
     @PrimaryGeneratedColumn('uuid')
